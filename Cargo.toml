@@ -1,0 +1,26 @@
+[package]
+name = "final-project"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "file_search"
+path = "src/lib/mod.rs"
+
+[features]
+metrics = []
+
+[dev-dependencies]
+criterion = { version = "0.5.1", features = ["html_reports"] }
+
+[dependencies]
+clap = { version = "4.5.19", features = ["derive"] }
+function-timer = "0.8.0"
+libc = "0.2.164"
+memchr = "2.7.4"
+memory-stats = "1.2.0"
+needle = "0.1.1"
+
+[[bench]]
+name = "experiments"
+harness = false
